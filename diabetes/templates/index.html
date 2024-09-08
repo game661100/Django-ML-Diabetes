@@ -1,0 +1,29 @@
+<html>
+
+<head>
+<title>PIMA Indian</title>
+</head>
+<body>
+    <center>
+    <h1>Diabetes Prediction</h1>
+   
+ 	  <form method="post"  >
+        {% csrf_token %}
+        <input type="text" class="input" name="Pregnancies"  placeholder="Pregnancies"> <br><br>
+        <input type="text" class="input" name="Glucose"  placeholder="Glucose"> <br><br>
+        <input type="text" class="input" name="BloodPressure"  placeholder="BloodPressure"> <br><br>
+        <input type="text" class="input" name="SkinThickness" placeholder="SkinThickness"> <br><br>
+        <input type="text" class="input" name="Insulin"  placeholder="Insulin"> <br><br>
+        <input type="text" class="input" name="BMI"  placeholder="BMI"> <br><br>
+        <input type="text" class="input" name="DiabetesPedigreeFunction"  placeholder="DiabetesPedigreeFunction"> <br><br>
+        <input type="text" class="input" name="Age"  placeholder="Age"> <br><br>
+        <input type=submit>
+       </form>
+   <br>
+   <br>
+       {% if result %}
+          <h1><b>Prediction:</b></h1><h1 color="red"><b>{{ result }}</b></h1>
+       {% endif %}
+    </center>
+</body>
+</html>
